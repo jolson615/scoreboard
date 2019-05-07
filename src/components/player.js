@@ -4,6 +4,9 @@ const Player = (props) => {
   const handleClick = (n) => {
     props.parent.setState(prevState => {
       prevState.players[props.id] += n
+      if (prevState.players[props.id] > prevState.players[prevState.winner]) {
+        prevState.winner = props.id
+      }
       return prevState
     })
   }
