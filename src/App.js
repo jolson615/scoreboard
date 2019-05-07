@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
+import Player from './components/player'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const compare = (a, b) => {
+  return a == b ? "It's a tie" : a > b ? "Player 1 is the winner" : "Player 2 is the winner"
+}
+
+const App = () => {
+  const component = new React.Component()
+  component.state = {
+    players: [0, 0]
+  }
+
+  component.render = () => {
+    return (
+      <div>
+        {compare(component.state.players[0], component.state.players[1])}
+        <Player id={0} parent={component}/>
+        <Player id={1} parent={component}/>
+      </div>
+    )
+  }
+  return component
 }
 
 export default App;
