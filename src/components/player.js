@@ -1,4 +1,5 @@
 import React from 'react';
+import './player.css';
 
 const Player = (props) => {
   const handleClick = (n) => {
@@ -12,7 +13,7 @@ const Player = (props) => {
   }
 
   return (
-    <div>
+    <div className="Player">
       <h1>{props.parent.state.players[props.id]}</h1>
       <div>
         <button onClick={()=>handleClick(-1)}>⬇️</button>
