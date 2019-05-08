@@ -28,8 +28,8 @@ const App = () => {
       <div>
         <h1 className="Winner">{genScoreboardMessage(component.state.winner)}</h1>
         <div className="Players">
-          <Player id={0} score={component.state.players[0]} clickHandler={handleClick}/>
-          <Player id={1} score={component.state.players[1]} clickHandler={handleClick}/>
+          <Player id={0} scores={component.state.players} clickHandler={handleClick}/>
+          <Player id={1} scores={component.state.players} clickHandler={handleClick}/>
         </div>
       </div>
     )
