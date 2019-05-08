@@ -6,31 +6,27 @@ const genScoreboardMessage = winner => {
   return "Player " + winner + " wins!"
 }
 
-const range = n => Array.from(Array(n).keys())
-
-const players = (howManyPlayers, parent) => {
-  return range(howManyPlayers).map((i)=>
-    <Player key={i} id={i} parent={parent}/>)
-}
-
-const GenericApp = (howManyPlayers) => {
+const App => {
   const component = new React.Component()
   component.state = {
-    players: Array(howManyPlayers).fill(0),
+    players: [0,0,0,0,0,0],
     winner: 0
   }
 
   component.render = () => {
     return (
       <div>
-        {genScoreboardMessage(component.state.winner)}
-        {players(howManyPlayers, component)}
+        {genScoreboardMessage(component.state.whowManyPlayersnner)}
+        <Player key={0} id={0} parent={component}/>
+        <Player key={1} id={1} parent={component}/>
+        <Player key={2} id={2} parent={component}/>
+        <Player key={3} id={3} parent={component}/>
+        <Player key={4} id={4} parent={component}/>
+        <Player key={5} id={5} parent={component}/>
       </div>
     )
   }
   return component
 }
-
-const App = () => GenericApp(10)
 
 export default App;
