@@ -6,7 +6,7 @@ const genScoreboardMessage = winner => {
   return "Player " + winner + " wins!"
 }
 
-const App => {
+const App = () => {
   const component = new React.Component()
   component.state = {
     players: [0,0,0,0,0,0],
