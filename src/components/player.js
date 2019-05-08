@@ -1,13 +1,25 @@
 import React from 'react';
 import './player.css';
 
+const getMax = arr => {
+  let maxVal = arr[0]
+  let maxIdx = 0
+  arr.slice(1).forEach((v, i) => {
+    if (v > maxVal) {
+      maxIdx = i
+      maxVal = v
+    } else if (v == maxVal) {
+      maxIdx = -1
+    }
+  })
+  return maxIdx
+}
+
 const Player = (props) => {
   const handleClick = (n) => {
     props.parent.setState(prevState => {
       prevState.players[props.id] += n
-      if (prevState.players[props.id] > prevState.players[prevState.winner]) {
-        prevState.winner = props.id
-      }
+      prevState.winner = getMax(prevState.players)
       return prevState
     })
   }

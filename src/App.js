@@ -3,6 +3,9 @@ import Player from './components/player'
 import './App.css';
 
 const genScoreboardMessage = winner => {
+  if (winner == -1) {
+    return "It's a tie!"
+  }
   return "Player " + winner + " wins!"
 }
 
@@ -17,7 +20,7 @@ const GenericApp = (howManyPlayers) => {
   const component = new React.Component()
   component.state = {
     players: Array(howManyPlayers).fill(0),
-    winner: 0
+    winner: -1
   }
 
   component.render = () => {
