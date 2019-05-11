@@ -2,35 +2,40 @@ import React from 'react';
 import Player from './components/player'
 import './App.css';
 
-const genScoreboardMessage = winner => {
-  return "Player " + winner + " wins!"
-}
-
 const App = () => {
   const component = new React.Component()
   component.state = {
-    players: [0, 0],
-    winner: 0,
+    playerAScore: 0,
+    winningScore: 0,
+    winner: "Player A",
   }
 
-  const handleClick = (n, id) => {
-    component.setState(prevState => {
-      prevState.players[id] += n
-      if (prevState.players[id] > prevState.players[prevState.winner]) {
-        prevState.winner = id
-      }
-      return prevState
+  const handlePlayerAClick = () => {
+    // Take a copy of state
+    let newState = {...component.state}
+    // Modify state
+    newState.playerAScore += 1
+    // Trigger a re-render by using the setState() method
+    component.setState(newState)
+  }
+
+  const reset = () => {
+    component.setState({
+      playerAScore: 0,
+      winningScore: 0,
+      winner: "Player A",
     })
   }
 
   component.render = () => {
     return (
-      <div>
-        <h1 className="Winner">{genScoreboardMessage(component.state.winner)}</h1>
+      <div className="App">
+        <h1 className="Winner">Player ## is in the lead!</h1>
+        <h3>The winner has ## points</h3>
         <div className="Players">
-          <Player id={0} scores={component.state.players} clickHandler={handleClick}/>
-          <Player id={1} scores={component.state.players} clickHandler={handleClick}/>
+          <Player id={0} score={component.state.playerAScore} clickHandler={handlePlayerAClick}/>
         </div>
+        <button onClick={reset}>Reset</button>
       </div>
     )
   }

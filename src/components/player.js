@@ -2,20 +2,15 @@ import React from 'react';
 import './player.css';
 
 const Player = (props) => {
-  const component = new React.Component(props)
-
-  component.render = () => {
-    return (
-      <div className="Player">
-        <h1>{props.scores[props.id]}</h1>
-        <div>
-          <button onClick={()=>props.clickHandler(-1, props.id)}>⬇️</button>
-          <button onClick={()=>props.clickHandler(1, props.id)}>⬆️</button>
-        </div>
+  return (
+    <div className="Player">
+      <h1>Player {props.id}</h1>
+      <h3>Score: {props.score}</h3>
+      <div>
+        <button onClick={()=>props.clickHandler()}>⬆️</button>
       </div>
-    )
-  }
-  return component
+    </div>
+  )
 }
 
 export default Player;
