@@ -4,6 +4,7 @@
 
 .App .Players {
   display: flex;
+  flex-wrap: wrap;
   margin:40px auto;
   max-width:650px;
 }
