@@ -7,7 +7,11 @@ const Player = (props) => {
       <h1>Player {props.id}</h1>
       <h3>Score: {props.score}</h3>
       <div>
-        <button onClick={()=>props.clickHandler()}>⬆️</button>
+        <button onClick={()=>props.clickHandler()}>
+          <span role="img" aria-label="up">
+            ⬆️
+          </span>
+        </button>
       </div>
     </div>
   )
