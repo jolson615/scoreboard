@@ -14,6 +14,7 @@ If you don't create new functions and modify the component.state initial setup, 
 
 ### 3. Current Winner
 Show the current winner in the App.
+> Consider also how you might show a "?" when there is a tie.
 
 ### 4. Winning Score
 Show the current high score in the App.
@@ -24,4 +25,6 @@ If you've currently encoded the event handler as `onClick={()=>props.clickHandle
 * Store the scores more efficiently - an array or an object could both make the processes of changing scores and identifying a high score and a current winner a lot easier.
 * Modify the game to work for 4-10 players.
 * Add a reset button.
-* Add an "add player" and a "remove player" button. 
+  > Think about how your reset button will work. Will it reset the app back to two players with scores of 0? or will it retain the number of players and reset all scores to 0? 
+* Add an "add player" and a "remove player" button.
+  > Do you want there to be a maximum number of players allowed?
