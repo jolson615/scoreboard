@@ -20,10 +20,11 @@ Show the current winner in the App.
 Show the current high score in the App.
 
 ## Extensions
-* Consolidate the `handlePlayerAClick` and `handlePlayerBClick` functions to be a single function.
-If you've currently encoded the event handler as `onClick={()=>props.clickHandler()}` you may want to add additional information as an argument (`onClick={()=>props.clickHandler(props.id)}`), and then rewrite the function definition of `const handlePlayerAClick = ()` with a parameter like `const handlePlayerAClick = (id)`.
+* Consolidate the `handlePlayerAClick` and `handlePlayerBClick` functions to be a single function called `handlePlayerClick`.
+> The event handler in `player.js` is `onClick={()=>props.clickHandler()}`. One strategy is to add additional information as an argument of the `clickHandler` function: (`onClick={()=>props.clickHandler(props.id)}`). You could then rewrite the function definition of `const handlePlayerAClick = ()` with a parameter like `const handlePlayerAClick = (id)`. There are other ways to accomplish this, too.
 * Store the scores more efficiently - an array or an object could both make the processes of changing scores and identifying a high score and a current winner a lot easier.
-* Modify the game to work for 4-10 players.
+  > Hint: Explore JavaScript methods that will help you find the maximum value of an array or an array of objects. You might also look for a way to identify the index of the element with that maximum value.
+* Modify the game to work for between 4 and 10 players.
 * Add a reset button.
   > Think about how your reset button will work. Will it reset the app back to two players with scores of 0? or will it retain the number of players and reset all scores to 0? 
 * Add an "add player" and a "remove player" button.
