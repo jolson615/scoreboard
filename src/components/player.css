@@ -4,3 +4,9 @@
   text-align: center;
   border: 1px solid;
 }
+
+.Player button {
+  font-size: 2rem;
+  border: none;
+  outline: none;
+}
