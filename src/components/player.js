@@ -2,6 +2,7 @@ import React from 'react';
 import './player.css';
 
 const Player = (props) => {
+
   return (
     <div className="Player">
       <h1>Player {props.id}</h1>

@@ -30,12 +30,13 @@ const App = () => {
   component.render = () => {
     return (
       <div className="App">
+        <div className="banner">SCOREBOARD</div>
         <h1 className="Winner">Player ## is in the lead!</h1>
         <h3>The winner has ## points</h3>
         <div className="Players">
           <Player id={0} score={component.state.playerAScore} clickHandler={handlePlayerAClick}/>
         </div>
-        <button onClick={reset}>Reset</button>
+        <button className="ResetButton" onClick={reset}>Reset</button>
       </div>
     )
   }
