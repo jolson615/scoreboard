@@ -1,9 +1,13 @@
 # Scorekeeper React App
 
-## The Setup
+## The Goal
+
+You're going to build an app that allows you to keep track of player scores in real time. You may have seen something like this at some point - Class Dojo is fairly similar. But this one will be built from scratch, and it'll be all yours. 
+
+## Getting Started
 
 1. Clone this repository using `git clone`
-2. `cd` into the `scoreboard` folder
+2. `cd` into the project folder
 3. `npm install`
 4. `npm start`
 
@@ -37,7 +41,7 @@ Modify the game to work for between 4 and 10 players.
 
 ### 8. User Interface #1
 Add a reset button.
-Think about how your reset button will work. Will it reset the app back to two players with scores of 0? or will it retain the number of players and reset all scores to 0? 
+Think about how your reset button will work. Will it reset the app back to two players with scores of 0? or will it retain the number of players and reset all scores to 0?
 
 ### 9. User Interface #2
 Add an "add player" and a "remove player" button.
