@@ -1,6 +1,6 @@
 # Scorekeeper React App
 
-![Scoreboard Preview](./scoreboardpreview.png)
+![Scoreboard Preview](./scoreboardpreview2.png)
 
 ## The Goal
 
