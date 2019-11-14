@@ -1,8 +1,10 @@
 # Scorekeeper React App
 
+![Scoreboard Preview](./scoreboardpreview.png)
+
 ## The Goal
 
-You're going to build an app that allows you to keep track of player scores in real time. You may have seen something like this at some point - Class Dojo is fairly similar. But this one will be built from scratch, and it'll be all yours. 
+You're going to build an app that allows you to keep track of player scores in real time. You may have seen something like this at some point - Class Dojo is fairly similar. But this one will be built from scratch, and it'll be all yours.
 
 ## Getting Started
 
