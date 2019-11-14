@@ -5,7 +5,7 @@ const Player = (props) => {
 
   return (
     <div className="Player">
-      <h1>Player {props.id}</h1>
+      <h1>Player {props.name}</h1>
       <h3>Score: {props.score}</h3>
       <div>
         <button onClick={()=>props.clickHandler()}>
