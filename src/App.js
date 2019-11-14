@@ -34,7 +34,7 @@ const App = () => {
         <h1 className="Winner">Player ## is in the lead!</h1>
         <h3>The winner has ## points</h3>
         <div className="Players">
-          <Player id={0} score={component.state.playerAScore} clickHandler={handlePlayerAClick}/>
+          <Player id={0} name={"A"} score={component.state.playerAScore} clickHandler={handlePlayerAClick}/>
         </div>
         <button className="ResetButton" onClick={reset}>Reset</button>
       </div>
