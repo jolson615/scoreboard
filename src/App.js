@@ -1,46 +1,45 @@
 import React from 'react';
-import Player from './components/player'
+import Player from './components/player';
 import './App.css';
 
-const App = () => {
-  const component = new React.Component()
-  component.state = {
-    playerAScore: 0,
-    winningScore: 0,
-    winner: "Player A",
-  }
-
-  const handlePlayerAClick = () => {
-    // Take a copy of state
-    let newState = {...component.state}
-    // Modify state
-    newState.playerAScore += 1
-    // Trigger a re-render by using the setState() method
-    component.setState(newState)
-  }
-
-  const reset = () => {
-    component.setState({
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
       playerAScore: 0,
       winningScore: 0,
       winner: "Player A",
-    })
+    }
+  }  
+
+  handlePlayerAClick = () => {
+    this.setState(state => {
+      state.playerAScore += 1
+      return state
+    });
   }
 
-  component.render = () => {
+  reset = () => {
+    this.setState({
+      playerAScore: 0,
+      winningScore: 0,
+      winner: "Player A",
+    });
+  }
+
+  render() {
     return (
       <div className="App">
         <div className="banner">SCOREBOARD</div>
         <h1 className="Winner">Player ## is in the lead!</h1>
         <h3>The winner has ## points</h3>
         <div className="Players">
-          <Player id={0} name={"A"} score={component.state.playerAScore} clickHandler={handlePlayerAClick}/>
+          <Player id={0} name={"A"} score={this.state.playerAScore} clickHandler={this.handlePlayerAClick}/>
         </div>
-        <button className="ResetButton" onClick={reset}>Reset</button>
+        <button className="ResetButton" onClick={this.reset}>Reset</button>
       </div>
-    )
+    );
   }
-  return component
 }
 
 export default App;

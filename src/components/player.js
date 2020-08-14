@@ -1,8 +1,7 @@
 import React from 'react';
 import './player.css';
 
-const Player = (props) => {
-
+function Player(props) {
   return (
     <div className="Player">
       <h1>Player {props.name}</h1>
@@ -15,7 +14,7 @@ const Player = (props) => {
         </button>
       </div>
     </div>
-  )
+  );
 }
 
 export default Player;
