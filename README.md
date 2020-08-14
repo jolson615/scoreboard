@@ -19,7 +19,7 @@ You're going to build an app that allows you to keep track of player scores in r
 Right now the lab only keeps track of a single player. Add a "Player B" component to the app.
 
 #### 2. Make Player B Work
-If you don't create new functions and modify the component.state initial setup, Player B's buttons won't work.
+If you don't create new functions and modify the state's initial setup, Player B's buttons won't work.
 
 #### 3. Current Winner
 Show the current winner in the App.
